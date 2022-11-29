@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>storage</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    public void addingMoneyFromUser() {
+    //		double balanceInMachine = 0;
+    System.out.println("Please enter money into the vending machine in whole dollar amounts ($1, $5, $10, etc.): ");
+
+    try {
+    int userAddsThisMoney = in.nextInt();
+    in.nextLine();
+    if (userAddsThisMoney % 1 == 0) {
+    Double newMoney = (double) userAddsThisMoney;
+    System.out.println("You now have $" + newMoney + " available.");
+    } else {
+    System.out.println("You've entered an invalid amount.");
+    Double newMoney = 0.0;
+    }
+    this.newMoney = newMoney;
+    } catch (NumberFormatException e) {
+    e.printStackTrace();
+    }
+    }
+
+
+
+
+
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+</project>
